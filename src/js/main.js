@@ -77,7 +77,7 @@ function paintSeries() {
   let htmlCode = "";
   for (const serie of series) {
     htmlCode += `<li class="card__list">`;
-    htmlCode += `<div class="card__lis--item js-card" id="${serie.id}">`;
+    htmlCode += `<div class="card__list--item js-card" id="${serie.id}">`;
     htmlCode += `<h4>${serie.name}</h4>`;
     htmlCode += `<img class="card__list--img"
         src="${serie.image}"
@@ -93,16 +93,16 @@ function paintSeries() {
 //funcion pintar las series en tarjetas favoritas
 function paintFavouriteSeries() {
   let htmlCode = "";
-  htmlCode += `<button class="card__list--button-reset js-reset">Borrar todo</buton>`;
+  htmlCode += `<button class="card__list--button-reset js-reset">Borrar todo</button>`;
   for (const favourite of arrayFavourites) {
-    htmlCode += `<li class="card__list">`;
-    htmlCode += `<div class="card__list--item" id="${favourite.id}">`;
+    htmlCode += `<li class="section-favourites__cards">`;
+    htmlCode += `<div class="section-favourites__cards--item" id="${favourite.id}">`;
     htmlCode += `<h4>${favourite.name}</h4>`;
-    htmlCode += `<img class="card__list--img"
+    htmlCode += `<img class="section-favourites__cards--img"
             src="${favourite.image}"
             title="${favourite.name}"
             alt="${favourite.name}"/>`;
-    htmlCode += `<button class="card__list--button js-remove" id="${favourite.id}">X</buton>`;
+    htmlCode += `<i class="section-favourites__cards--button js-remove gg-trash" id="${favourite.id}"></i>`;
   }
   htmlCode += `</div>`;
   htmlCode += `</li>`;

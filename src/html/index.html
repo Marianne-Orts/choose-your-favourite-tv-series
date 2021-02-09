@@ -8,34 +8,40 @@
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
     />
-
+    <link href="https://css.gg/trash.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
 
   <body>
-    <header>
+    <header class="header">
       <h1 class="title">Buscador de series</h1>
+      
     </header>
-    <main>
-      <form class="js-form">
-        <input
-          class="input js-input"
-          type="text"
-          id="search"
-          name="buscador"
-          placeholder="Encuentra tu serie favorita"
-        />
-        <input class="js-btn" type="submit" value="Search" />
-      </form>
-
+    <main class="container">
+      <section class="section-search">
+        <form class="js-form">
+          <input
+            class="section-search__input js-input"
+            type="text"
+            id="search"
+            name="buscador"
+            placeholder="Encuentra tu serie favorita"
+          />
+          <input
+            class="section-search__button js-btn"
+            type="submit"
+            value="Search"
+          />
+        </form>
+      </section>
       <section class="section-cards">
         <ul class="cards js-cards"></ul>
       </section>
 
-      <section>
+      <section class="section-favourites">
         <h3>Mis series favoritas</h3>
 
-        <ul class="favourite-cards js-favourite-cards"></ul>
+        <ul class="section-favourites__cards js-favourite-cards"></ul>
       </section>
     </main>
 
