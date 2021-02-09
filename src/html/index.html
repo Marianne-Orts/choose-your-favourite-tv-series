@@ -17,26 +17,26 @@
       <h1 class="title">Buscador de series</h1>
     </header>
     <main>
-      <form class="js-form" action="" method="POST">
+      <form class="js-form">
         <input
-          class="search__input js-search"
+          class="input js-input"
           type="text"
           id="search"
           name="buscador"
           placeholder="Encuentra tu serie favorita"
         />
-        <input type="submit" value="Search" />
+        <input class="js-btn" type="submit" value="Search" />
       </form>
-      <div class="card">
-        <h4>titulo de la serie</h4>
-        <img src="" title="" alt="" />
-      </div>
 
-      <nav class="list">
-        <ul class="list">
-          <li></li>
-        </ul>
-      </nav>
+      <section class="section-cards">
+        <ul class="cards js-cards"></ul>
+      </section>
+
+      <section>
+        <h3>Mis series favoritas</h3>
+
+        <ul class="favourite-cards js-favourite-cards"></ul>
+      </section>
     </main>
 
     <script src="./assets/js/main.js"></script>
