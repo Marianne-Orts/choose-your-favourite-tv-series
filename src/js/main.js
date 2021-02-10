@@ -23,9 +23,9 @@ function getDataFromApi(inputValue) {
   fetch(`https://api.tvmaze.com/search/shows?q=${inputValue}`)
     .then((response) => response.json())
     .then((data) => {
-      series = []; // para que vacieel array si quiero cambiar la busqueda
+      series = []; // para que vacie el array si quiero cambiar la busqueda
       for (const serie of data) {
-        //creo un objeto con lo que me interesa
+        //creo un objeto con lo que me interesa traer del api y que luego utilizaré en fav
         let urlImage;
         if (serie.show.image === null) {
           urlImage =
@@ -40,7 +40,6 @@ function getDataFromApi(inputValue) {
         };
         series.push(objectSerie);
       }
-      console.log(series);
       paintSeries();
       setInLocalStorage();
       paintFavouriteSeries();

@@ -2,6 +2,7 @@
   width: 100%;
   height: 140px;
   padding-top: 30px;
+  font-family: $fontMain;
   font-size: x-large;
   text-align: center;
   color: $colorTextHeader;
@@ -9,7 +10,7 @@
 }
 .container {
   width: 100%;
-
+  font-family: $fontMain;
   display: flex;
   background-color: $colorBackgroundPage;
 }
@@ -25,9 +26,11 @@
     padding: 10px;
     font-size: medium;
     color: $colorTextTitles;
-    /* background-color: $colorBackgroundPage; */
     &::placeholder {
       color: $colorTextTitles;
+    }
+    &:hover {
+      cursor: pointer;
     }
   }
   &__button {
