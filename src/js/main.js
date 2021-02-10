@@ -6,7 +6,7 @@ const btnElement = document.querySelector(".js-btn");
 const cardsElement = document.querySelector(".js-cards");
 const favouritesElement = document.querySelector(".js-favourite-cards");
 
-//estas varuiables son globales y van fuera de todas las funciones
+//estas variables son globales y van fuera de todas las funciones
 //ademas siendo globales no es olbligatorio pasarlas por parametros en las funciones
 let series = [];
 let arrayFavourites = [];
@@ -96,7 +96,7 @@ function paintFavouriteSeries() {
   for (const favourite of arrayFavourites) {
     htmlCode += `<li class="section-favourites__cards">`;
     htmlCode += `<div class="section-favourites__cards--item" id="${favourite.id}">`;
-    htmlCode += `<h4>${favourite.name}</h4>`;
+    htmlCode += `<h4 "section-favourites__cards--title">${favourite.name}</h4>`;
     htmlCode += `<img class="section-favourites__cards--img"
             src="${favourite.image}"
             title="${favourite.name}"
