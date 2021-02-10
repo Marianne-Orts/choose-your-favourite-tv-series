@@ -51,7 +51,11 @@
   text-align: center;
   color: $colorTextTitles;
   text-overflow: clip;
+  display: flex;
+  flex-direction: column;
+
   &__cards {
+    margin-bottom: 10px;
     list-style: none;
     color: $colorTextTitles;
     &--item {

@@ -46,18 +46,18 @@ function getDataFromApi(inputValue) {
     });
 }
 
-// local storage, solo permite guardar strings
+// Guardar en local storage las series favoritas.Solo permite guardar strings
 
 function setInLocalStorage() {
-  const stringSeries = JSON.stringify(arrayFavourites); //convierte array en string
-  localStorage.setItem("favouriteSeries", stringSeries);
+  const stringFavouriteSeries = JSON.stringify(arrayFavourites); //convierte array en string
+  localStorage.setItem("favouriteSeries", stringFavouriteSeries);
 }
 
 function getFromLocalStorage() {
   const localStorageFavourites = localStorage.getItem("favouriteSeries"); //recupera info de LS
   if (localStorageFavourites !== null) {
-    //cada vez que pido datos hay que ver si hay o esta vacio el LS
-    const arrayFavourites = JSON.parse(localStorageFavourites); //convierte string en array
+    //cada vez que pido datos hay que ver si hay datos o esta vacio el LS
+    arrayFavourites = JSON.parse(localStorageFavourites); //convierte string en array NO METER EN CTE, YA LO ES
     paintFavouriteSeries(arrayFavourites);
   }
 }
@@ -117,10 +117,11 @@ function handleCard(event) {
   const clickedSeries = parseInt(event.currentTarget.id); //selecciono serie clickada por el id
   const favouriteFoundIndexInArrayFavourites = arrayFavourites.findIndex(
     (favourite) => favourite.id === clickedSeries
-  ); //busco si está en arrayFavourites
+  ); //busco si el indice está en arrayFavourites
 
   if (favouriteFoundIndexInArrayFavourites === -1) {
     // si no está en el array(el indice es -1 significa que no existe ese id)
+    //lo meto con un for y un push
     for (const serie of series) {
       if (serie.id === clickedSeries) {
         arrayFavourites.push(serie);
