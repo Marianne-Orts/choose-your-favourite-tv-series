@@ -1,27 +1,31 @@
 .header {
   width: 100%;
-  height: 100px;
-  margin-top: 50px;
+  height: 140px;
+  padding-top: 30px;
+  font-size: x-large;
   text-align: center;
-  color: rgb(149, 30, 120);
+  color: $colorTextHeader;
+  background-color: $colorBackgroundPage;
 }
 .container {
   width: 100%;
-  height: 100vh;
+
   display: flex;
+  background-color: $colorBackgroundPage;
 }
 .section-search {
   padding: 15px;
 
   &__input {
     border: none;
-
+    outline: none;
     background-color: #fcfcfc;
     border: 0;
     border-bottom: 2px solid $colorTextTitles;
     padding: 10px;
     font-size: medium;
     color: $colorTextTitles;
+    /* background-color: $colorBackgroundPage; */
     &::placeholder {
       color: $colorTextTitles;
     }
@@ -33,19 +37,20 @@
     border: none;
     font-size: medium;
     color: white;
-    background-color: rgb(233, 7, 176);
+    background-color: $colorTextTitles;
+    outline: none;
   }
 }
 .section-favourites {
   width: 30%;
+  margin-top: 15px;
   font-size: medium;
   text-align: center;
-  color: rgb(233, 7, 176);
-
+  color: $colorTextTitles;
   text-overflow: clip;
   &__cards {
     list-style: none;
-    color: rgb(233, 7, 176);
+    color: $colorTextTitles;
     &--item {
       display: flex;
       justify-content: space-evenly;
@@ -56,7 +61,7 @@
     }
     &--button {
       margin: 10px;
-      color: rgb(233, 7, 176);
+      color: $colorTextTitles;
     }
   }
 }
@@ -79,8 +84,9 @@
       border: none;
       font-size: medium;
       color: white;
-      background-color: rgb(233, 7, 176);
+      background-color: $colorTextTitles;
       border-radius: 15px;
+      outline: none;
     }
     &--item {
       margin: 20px;

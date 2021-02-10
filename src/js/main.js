@@ -17,10 +17,10 @@ function handleForm(ev) {
 }
 formElement.addEventListener("submit", handleForm);
 
-//busqueda de serie en api
+//busqueda de serie en api/añadir la busqueda ${inputValue} en api
 
 function getDataFromApi(inputValue) {
-  fetch(`http://api.tvmaze.com/search/shows?q=${inputValue}`)
+  fetch(`https://api.tvmaze.com/search/shows?q=${inputValue}`)
     .then((response) => response.json())
     .then((data) => {
       series = []; // para que vacieel array si quiero cambiar la busqueda
